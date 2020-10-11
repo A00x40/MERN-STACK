@@ -1,11 +1,11 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IUser extends Document {
-  name: string; 
+  username: string; 
 }
 
 const userSchema:Schema = new Schema({
-    name:{
+    username:{
       type:String,
       minlenght:5,
       unique:true,

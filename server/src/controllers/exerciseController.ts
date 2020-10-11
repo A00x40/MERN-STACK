@@ -40,7 +40,7 @@ export const deleteOneExercise =(req: express.Request, res: express.Response) =>
 export const updateOneExercise = (req: express.Request, res: express.Response) => {
     Exercise.findById(req.params.id)
       .then(exercise => {
-        exercise!.name = req.body.username;
+        exercise!.username = req.body.username;
         exercise!.description = req.body.description;
         exercise!.duration = Number(req.body.duration);
         exercise!.date = new Date(req.body.date);
